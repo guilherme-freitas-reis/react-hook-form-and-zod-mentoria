@@ -5,6 +5,7 @@ function BasicReactForm() {
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
   const [email, setEmail] = useState("");
+  const [age, setAge] = useState("");
 
   // Quanto mais campos, mais verboso fica o código
   // Renderiza o componente toda vez que o estado é alterado
@@ -17,6 +18,7 @@ function BasicReactForm() {
       name,
       surname,
       email,
+      age,
     };
 
     alert(JSON.stringify(data));
@@ -42,6 +44,12 @@ function BasicReactForm() {
         placeholder="E-mail"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
+      />
+
+      <input
+        placeholder="Idade"
+        value={age}
+        onChange={(e) => setAge(e.target.value)}
       />
 
       <input type="submit" />

@@ -1,5 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 import { z } from "zod";
 
 const schema = z
@@ -46,6 +47,8 @@ function HookFormZod() {
       <span>{errors.age?.message}</span>
 
       <input type="submit" />
+
+      <Link to={"/"}>Voltar</Link>
     </form>
   );
 }
